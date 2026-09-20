@@ -6,6 +6,11 @@
 <meta name="theme-color" content="#0C0E26">
 <meta name="description" content="Full-stack developer building web platforms since class 8. Creator of AnimeXStream, a live streaming platform with accounts, MySQL, email and IPTV.">
 <title>Vikrant Kumar | Full-stack developer</title>
+<link rel="canonical" href="https://vikrantkumar24.github.io/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vikrant Kumar | Full-stack developer">
+<meta property="og:description" content="Full-stack developer building web platforms since class 8. Creator of AnimeXStream, a live streaming platform with accounts, MySQL, email and IPTV.">
+<meta property="og:url" content="https://vikrantkumar24.github.io/portfolio/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -248,6 +253,17 @@ h2{font-family:var(--display);font-weight:600;font-size:clamp(1.8rem,4.2vw,3.1re
 .card-links{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px 18px;padding-top:6px}
 .card-links a{font-weight:600;font-size:.95rem;color:var(--moon);border-bottom:1px solid var(--tint);padding-bottom:1px;transition:color .2s}
 .card-links a:hover{color:var(--tint)}
+/* highlighted project-report button */
+.card-links a.report{
+  display:inline-flex;align-items:center;gap:9px;padding:10px 18px;border-radius:999px;
+  border:1px solid var(--tint);color:var(--moon);font-weight:600;
+  background:rgba(255,194,77,.16);
+  background:color-mix(in srgb,var(--tint) 18%,transparent);
+  box-shadow:0 0 0 0 color-mix(in srgb,var(--tint) 40%,transparent);
+  transition:background .2s,color .2s,transform .2s,box-shadow .2s;
+}
+.card-links a.report svg{flex:none}
+.card-links a.report:hover{background:var(--tint);color:var(--ink);transform:translateY(-2px);box-shadow:0 10px 24px -10px var(--tint)}
 
 /* ---------- journey ---------- */
 .journey{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,96px);align-items:start}
@@ -409,8 +425,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
           <span class="tag">Python</span>
           <svg class="glyph" viewBox="0 0 120 44" aria-hidden="true"><path d="M6 34C30 34 34 14 58 16S94 32 114 10" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 5"/><circle cx="6" cy="34" r="4.5" fill="currentColor"/><circle cx="58" cy="16" r="4.5" fill="currentColor"/><circle cx="114" cy="10" r="4.5" fill="currentColor"/></svg>
           <h4>Railway reservation system</h4>
-          <p>A prototype of a railway reservation system in Python, built around the booking logic.</p>
-          <div class="card-links"><a data-repo="railway" hidden>View source code</a></div>
+          <p>An IRCTC-inspired railway reservation system in Python and MySQL, with signup and login, captcha, train search, booking, cancellation and PNR status.</p>
+          <div class="card-links"><a class="report" href="https://vikrantkumar24.github.io/portfolio/RAILWAY_RESERVATION_SYSTEM.pdf" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>View project report (PDF)</a><a data-repo="railway" hidden>View source code</a></div>
         </article>
 
         <article class="card wide js" data-tilt="5">
@@ -481,6 +497,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
           <p>Worked through a large set of problems and built a railway reservation prototype.</p>
         </div>
         <div class="step">
+          <span class="when">August 2026</span>
+          <h3>AI, robotics and Industry 4.0</h3>
+          <p>Completed a five-day online workshop by the ROBOTiX Club at NIT Raipur, covering AI, ROS, Gazebo and Rviz on Ubuntu.</p>
+        </div>
+        <div class="step">
           <span class="when">Right now</span>
           <h3>Learning Java</h3>
           <p>Picking up the basics and pairing them with what I already know.</p>
@@ -505,7 +526,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
         </div>
         <div class="skill-row">
           <h3>Languages</h3>
-          <ul class="chips"><li>Python</li><li class="learning">Java<small>learning</small></li></ul>
+          <ul class="chips"><li>Python</li><li>C++</li><li>PHP</li><li class="learning">Java<small>learning</small></li></ul>
+        </div>
+        <div class="skill-row">
+          <h3>Fundamentals</h3>
+          <ul class="chips"><li>Object-oriented programming</li><li>Data structures</li><li>Problem solving</li></ul>
+        </div>
+        <div class="skill-row">
+          <h3>Robotics and tools</h3>
+          <ul class="chips"><li>ROS</li><li>Gazebo</li><li>Rviz</li><li>Ubuntu</li><li>Git</li><li>GitHub</li></ul>
         </div>
         <div class="skill-row">
           <h3>Creative</h3>
@@ -552,10 +581,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
   var PROFILE = {
     name: 'Vikrant Kumar',
     email: 'heyvikrant24@gmail.com',
-    github: '',
+    github: 'https://github.com/vikrantkumar24',
     linkedin: 'https://www.linkedin.com/in/vikrantkumar-nitrr/',
     instagram: 'https://www.instagram.com/by.vikrant/',
-    resume: '',
+    resume: 'https://vikrantkumar24.github.io/portfolio/Vikrant_Kumar_Resume.pdf',
     repos: { anime: '', railway: '', netflix: '', youtube: '', spotify: '', chat: '', weather: '' }
   };
   /* ===================================================== */
@@ -590,6 +619,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
         if (!v) { el.hidden = true; return; }
         el.hidden = false;
         el.href = key === 'email' ? 'mailto:' + v : v;
+        if (key === 'resume') { el.setAttribute('download', ''); }
         if (key !== 'email') { el.target = '_blank'; el.rel = 'noopener'; }
       });
       $$('[data-text="' + key + '"]').forEach(function (el) { el.textContent = pretty(v || ''); });
