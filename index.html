@@ -160,6 +160,21 @@ ul.mini b { display: inline-block; min-width: 92px; color: var(--lime); font-wei
   ul.mini b { display: block; }
 }
 
+/* Hackathons */
+.hack { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); padding: clamp(24px, 4vw, 44px); border-radius: 28px; background: var(--card); border: 1px solid var(--line); }
+.hack-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.hack-tags .tag { margin: 0; align-self: auto; }
+.hack h3 { font-family: var(--display); font-weight: 900; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1; letter-spacing: -0.04em; text-transform: uppercase; margin: 0 0 6px; }
+.hack-sub { color: var(--lime); font-family: var(--serif); font-style: italic; font-size: 1.3rem; margin: 0 0 16px; }
+.hack p { color: #C9C9C2; margin: 0 0 22px; max-width: 52ch; }
+.hack-facts { margin: 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); align-self: start; }
+.hack-facts div { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.hack-facts div:nth-child(odd) { padding-right: 12px; }
+.hack-facts dt { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--grey); margin: 0 0 4px; }
+.hack-facts dd { margin: 0; font-family: var(--display); font-weight: 800; font-size: 1.05rem; letter-spacing: -0.02em; }
+@media (max-width: 860px) { .hack { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .hack-facts { grid-template-columns: 1fr; } .hack-facts div:nth-child(odd) { padding-right: 0; } }
+
 /* Journey */
 .timeline { display: grid; gap: 14px; position: relative; padding-left: 36px; }
 .timeline::before { content: ""; position: absolute; left: 7px; top: 34px; bottom: 34px; width: 2px; background: linear-gradient(to bottom, var(--line), var(--lime)); }
@@ -229,6 +244,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     <a class="brand" href="#top">Vikrant Kumar</a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#work">Projects</a>
+      <a href="#hackathons">Hackathons</a>
       <a href="#journey">Journey</a>
       <a href="#skills">Skills</a>
       <a class="nav-cta" href="#contact">Contact</a>
@@ -346,6 +362,33 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     </div>
   </section>
 
+  <section class="section" id="hackathons">
+    <div class="wrap">
+      <h2>Hack<em class="acc">athons</em></h2>
+      <p class="section-sub">Building under pressure, with a team, against the clock.</p>
+      <article class="hack">
+        <div>
+          <div class="hack-tags"><span class="tag">Selected &amp; Attended</span><span class="tag creative">Team Lead</span></div>
+          <h3>CodeUtsava X.0</h3>
+          <p class="hack-sub">Open Innovation track</p>
+          <p>Central India's largest hackathon: 28 hours of non-stop building. My team, Runtime Terror, was selected, attended, and shipped VacantDesk, a live classroom vacancy tracker for NIT Raipur. We didn't take home a win, but we built and deployed a working product in a single sitting.</p>
+          <div class="actions">
+            <a class="btn lime small" href="https://github.com/vikrantkumar24/VacantDesk" target="_blank" rel="noopener">View VacantDesk on GitHub ↗</a>
+            <a class="btn small" href="https://vacant-desk.vercel.app" target="_blank" rel="noopener">Open Live Site ↗</a>
+          </div>
+        </div>
+        <dl class="hack-facts">
+          <div><dt>Dates</dt><dd>3–4 Oct 2026</dd></div>
+          <div><dt>Duration</dt><dd>28 hours, non-stop</dd></div>
+          <div><dt>Team</dt><dd>Runtime Terror</dd></div>
+          <div><dt>My role</dt><dd>Team lead &amp; full-stack</dd></div>
+          <div><dt>Focus</dt><dd>Backend</dd></div>
+          <div><dt>Built</dt><dd>VacantDesk</dd></div>
+        </dl>
+      </article>
+    </div>
+  </section>
+
   <section class="section" id="journey">
     <div class="wrap">
       <h2>My <em class="acc">Journey</em></h2>
@@ -431,6 +474,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 <footer>
   <div class="wrap">
     <span>&copy; 2026 Vikrant Kumar</span>
+    <span>Designed &amp; built by hand</span>
   </div>
 </footer>
 
